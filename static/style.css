@@ -1,0 +1,23 @@
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+     }
+h1, h3 {
+    color: black;
+}
+
+form {
+    /*margin-left: 10px;*/
+    width: 100%;
+}
+
+.info {
+    color: black;
+}
+
+.error {
+    color: red;
+}

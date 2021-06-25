@@ -1,0 +1,22 @@
+{%  extends 'base.html' %}
+ {% block title %} Home page {%  endblock %}
+
+{% block content %}
+<br>
+<h3>გთხოვთ შეავსოთ <3 </h3>
+    <form method="post">
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="სახელი"><br>
+        <input type="text" name="surname" class="form-control" placeholder="გვარი"><br>
+        <input type="text" name="question1" class="form-control"  placeholder="კმაყოფილების კვლევა"><br>
+          <input type="text" name="question2" class="form-control"  placeholder="რჩევები განვითარებისთვის"><br>
+      </div>
+       {% with messages=get_flashed_messages(with_categories=True) %}
+            {% for category, msg in messages %}
+                <p class="{{ category }}">{{ msg }}</p>
+            {% endfor %}
+        {% endwith %}
+
+    <button type="submit" class="btn btn-primary"> Submit</button>
+    </form>
+{% endblock %}
